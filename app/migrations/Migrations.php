@@ -418,8 +418,9 @@ class Migrations
     }
 
     public static function README() {
-        $f = fopen(@getcwd().'/app/migrations/README.md', 'r');
-        echo fread($f, filesize('./README.md'));
+        $url = "https://github.com/boosteddevmate/boosted-migrations-manager/blob/main/app/migrations/README.md";
+        $cmd=sprintf( 'start %s',$url );
+        exec( $cmd );
     }
 }
 
